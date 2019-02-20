@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Focus Audio Player </title>
+    <meta name="description" content="Focus Audio Player" />
+    <meta name="keywords" content="Widget,audio,player,jplayer,jplayer skin,mp3 player,music player,playlist" />
+    <meta name="author" content="MetroThemes" />
+
+    <script src="assets/js/libs/jquery-1.10.0.js"></script>
+
+    <!-- stylesheet -->
+    <link href="assets/css/focus_style.css" media="screen" rel="stylesheet">
+    <link href="assets/css/jplayer.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/metroplayericon.css" />
+
+    <script>
+						    //<![CDATA[
+						    $(document).ready(function(){
+
+						        new jPlayerPlaylist({
+						            jPlayer: "#jquery_jplayer_1",
+						            cssSelectorAncestor: "#jp_container_1"
+						        }, [
+						            {
+						                title:"<img src='assets/images/10.jpg' alt='' /><div class='item-song'>Darin - OK </div><div class='item-artist'>Dangerous Game</div>",
+						                itunes :"#",
+						                amazon : "#",
+						                buy : "",
+						                download : "",
+
+
+						                mp3:"yinyue/Darin - OK (Dangerous Game).mp3",
+						                oga:""
+						            },
+						            {
+                                        title:"<img src='assets/images/11.jpg' alt='' /><div class='item-song'>Just a Dream </div><div class='item-artist'>Dangerous Game</div>",
+                                        itunes :"#",
+                                        amazon : "#",
+                                        buy : "",
+                                        download : "",
+
+
+                                        mp3:"yinyue/Kurt Hugo Schneider,Christina Grimmie,Sam Tsui - Just a Dream.mp3",
+                                        oga:""
+						            },
+						            {
+                                        title:"<img src='assets/images/12.jpg' alt='' /><div class='item-song'>少一点天分 </div><div class='item-artist'>孙盛希</div>",
+                                        itunes :"#",
+                                        amazon : "#",
+                                        buy : "",
+                                        download : "",
+
+
+                                        mp3:"yinyue/孙盛希 - 少一点天分.mp3",
+                                        oga:""
+						            },
+
+                                    {
+                                        title:"<img src='assets/images/13.jpg' alt='' /><div class='item-song'>Kaleena Zanders,Dropgun,Breathe Carolina </div><div class='item-artist'>Rhythm Is A Dancer</div>",
+                                        itunes :"#",
+                                        amazon : "#",
+                                        buy : "",
+                                        download : "",
+
+
+                                        mp3:"yinyue/Kaleena Zanders,Dropgun,Breathe Carolina - Rhythm Is A Dancer.mp3",
+                                        oga:""
+                                    }
+
+						        ], {
+						            swfPath: "js",
+						            supplied: "oga, mp3",
+						            wmode: "window",
+						            smoothPlayBar: false,
+						            keyEnabled: false
+						        });
+						    });
+						    //]]>
+						</script>
+
+</head>
+<body>
+    <div class="container">
+        <!-- Focus Audio Player -->
+        <div class="focus-container focus-audio boxed">
+            <div class="inner">
+                <div id="jquery_jplayer_1" class="jp-jplayer">
+                </div>
+                <div id="jp_container_1" class="jp-audio">
+                    <div class="inner">
+                        <div class="jp-gui jp-interface">
+                            <div class="jp-controls-wrap">
+                                <div class="song_title">
+                                </div>
+                                <div class="jp-current-time">
+                                </div>
+                                <div class="jp-duration">
+                                </div>
+                                <div class="jp-progress">
+                                    <div class="jp-seek-bar">
+                                        <div class="jp-play-bar">
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="jp-controls clearfix">
+                                    <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute"><i class="mticon-volume-high">
+                                    </i></a></li>
+                                    <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute"><i class="mticon-volume-mute2">
+                                    </i></a></li>
+                                    <li><a href="javascript:;" class="jp-previous disabled" tabindex="1"><i class="mticon-backward">
+                                    </i></a></li>
+                                    <li><a href="javascript:;" class="jp-play" tabindex="1"><i class="mticon-play"></i></a>
+                                    </li>
+                                    <li><a href="javascript:;" class="jp-pause" tabindex="1"><i class="mticon-pause"></i>
+                                    </a></li>
+                                    <li><a href="javascript:;" class="jp-next" tabindex="1"><i class="mticon-forward"></i>
+                                    </a></li>
+                                    <li><a href="javascript:;" class="jp-stop" tabindex="1"></a></li>
+                                    <li><a href="javascript:;" class="jp-repeat" tabindex="1" title="repeat"><i class="mticon-loop">
+                                    </i></a></li>
+                                    <li><a href="javascript:;" class="jp-repeat-off" tabindex="1" title="repeat off"><i
+                                        class="mticon-loop"></i></a></li>
+                                    <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume"></a>
+                                    </li>
+                                    <li><a href="javascript:;" class="jp-shuffle" tabindex="1" title="shuffle"></a></li>
+                                    <li><a href="javascript:;" class="jp-shuffle-off" tabindex="1" title="shuffle off"></a>
+                                    </li>
+                                    <li><a href="javascript:;" class="jp-playlist-toggle" tabindex="1" title="Toggle PlayList">
+                                        <i class="mticon-list-ul"></i></a></li>
+                                </ul>
+                                <div class="jp-volume-bar">
+                                    <div class="jp-volume-bar-value">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="jp-playlist">
+                            <ul class="jp-playlist-inner">
+                                <li></li>
+                            </ul>
+                        </div>
+                        <div class="jp-no-solution">
+                            <span>Update Required</span> <a href="http://get.adobe.com/flashplayer/" target="_blank">
+                                Flash plugin</a>.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Focus Audio Player -->
+    </div>
+    <!-- /container -->
+    <!-- Javascript -->
+
+    <script src="assets/js/jquery.jplayer.min.js"></script>
+
+    <script src="assets/js/jplayer.config.js"></script>
+
+    <script src="assets/js/jplayer.playlist.min.js"></script>
+
+</body>
+</html>
