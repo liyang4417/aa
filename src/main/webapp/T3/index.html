@@ -19,10 +19,11 @@
 
 				height: 800px;
 				width: 100%;
-				background: -webkit-radial-gradient(center center,600px 450px,rgba(244,23,234,0));
+				/*background: -webkit-radial-gradient(center center,600px 450px,rgba(244,23,234,0));
 
 				overflow: hidden;
-				perspective: 800px; /*景深*/
+				perspective: 800px;
+				*/
 			}
 			#box{
 				width: 120px;
@@ -30,7 +31,7 @@
 				margin: 220px auto;
 				position: relative;
 				transform-style: preserve-3d; /*3D显示   父元素有景深才可以*/
-				transform: rotateX(-25deg) rotateY(0deg); /*旋转 X轴向上抬高10度 Y轴不变*/
+				transform: rotateX(-20deg) rotateY(0deg); /*旋转 X轴向上抬高10度 Y轴不变*/
 			}
 			img{
 				position: absolute;
@@ -43,9 +44,6 @@
 
 				height: 100%;
 			}
-			#two{
-					 background: url("img/universe.png") no-repeat center center;
-				 }
 		</style>
 	</head>
 	<body>
@@ -57,19 +55,16 @@
 		<div class="a">
 		 <div id="box">
 			<img src="img/22.jpg" alt="" class="img1" onclick="window.open('../T5/index.html')"/>
-			<img src="img/24.jpg" alt="" class="img2" onclick="window.open('')"/>
+			<img src="img/24.jpg" alt="" class="img2" onclick="window.open('../A2/index.html')"/>
 			<img src="img/16.jpg" alt="" class="img3" onclick="window.open('../T52/index.html')"/>
-			<img src="img/25.jpg" alt="" class="img4" onclick="window.open('')"/>
-			<img src="img/26.jpg" alt="" class="img5" onclick="window.open('')"/>
-			<img src="img/20.jpg" alt="" class="img6" onclick="window.open('../T53/index.html')"/>
-			<img src="img/27.jpg" alt="" class="img7" onclick="window.open('')"/>
-			<img src="img/23.jpg" alt="" class="img8" onclick="window.open('')"/>
+			<img src="img/25.jpg" alt="" class="img4" onclick="window.open('../T57/index.html')"/>
+			<img src="img/20.jpg" alt="" class="img6" onclick="window.open('../dy?type=select')"/>
 			<img src="img/29.jpg" alt="" class="img9" onclick="window.open('../T51/index.html')"/>
-			<img src="img/28.jpg" alt="" class="img10" onclick="window.open('')"/>
-			<img src="img/31.jpg" alt="" class="img11" onclick="window.open('')"/>
-			<img src="img/21.jpg" alt="" class="img12" onclick="window.open('')"/>
-			<img src="img/32.jpg" alt="" class="img13" onclick="window.open('')"/>
-			<img src="img/30.jpg" alt="" class="img15" onclick="window.open('')"/>
+			<img src="img/28.jpg" alt="" class="img10" onclick="window.open('../T55/index.html')"/>
+			<img src="img/31.jpg" alt="" class="img11" onclick="window.open('../T59/index.html')"/>
+			<img src="img/21.jpg" alt="" class="img12" onclick="window.open('../T54/index.html')"/>
+			<img src="img/32.jpg" alt="" class="img13" onclick="window.open('../T56/index.html')"/>
+			<img src="img/30.jpg" alt="" class="img15" onclick="window.open('../T58/index.html')"/>
 		 </div>
 		</div>
 
@@ -78,15 +73,8 @@
 	<script src="index.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery-1.12.4.js"></script>
 	<script type="text/javascript">
-            $("img").click(function () {
-            var s=$(this).attr("alt");
-            window.location.href = s;
-             })
 
-            $(function () {
-                $("#one").load('index2.html')
-            })
-//two  是蓝色背景   one是球动
+
 	</script>
 </html>
 

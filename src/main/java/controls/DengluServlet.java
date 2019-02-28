@@ -10,6 +10,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by LENOVO on 2019-01-04.
@@ -18,18 +21,21 @@ import java.io.IOException;
 public class DengluServlet extends HttpServlet {
     DengluService dengluService=new DengluServiceImpl();
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setCharacterEncoding("utf-8");
+          request.setCharacterEncoding("utf-8");
         int username= Integer.parseInt(request.getParameter("username"));
         int password= Integer.parseInt(request.getParameter("password"));
         Denglu denglu=new Denglu();
         denglu.setUser(username);
         denglu.setPwd(password);
-        if (dengluService.login(denglu)){
-             request.getSession().setAttribute("user",denglu);
-             response.sendRedirect("../T42/index.html");   //成功要跳转T42文件的index.html
-        }else {
-            response.sendRedirect("T4/index.html");
+        String used="false";
+        if(dengluService.login(denglu)){
+            used="true";
         }
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out=response.getWriter();
+        out.print(used);
+        out.flush();
+        out.close();
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

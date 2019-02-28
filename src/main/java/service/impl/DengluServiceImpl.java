@@ -2,7 +2,8 @@ package service.impl;
 
 import Dao.DengluDao;
 import Dao.imp.DengluDaoImp;
-import entity.Denglu;
+import entity.*;
+import entity.guanli;
 import service.DengluService;
 
 /**
@@ -17,5 +18,19 @@ public class DengluServiceImpl implements DengluService {
         }else {
             return true;
         }
+    }
+
+    @Override
+    public boolean tt(guanli guanl) {
+        if (dengluDao.tt(guanl)==0) {
+            return false;
+        }else {
+            return true;
+        }
+    }
+
+    @Override
+    public int add(guanli guanl) {
+        return dengluDao.add(guanl);
     }
 }

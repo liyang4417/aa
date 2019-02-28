@@ -15,70 +15,47 @@
     <link href="assets/css/focus_style.css" media="screen" rel="stylesheet">
     <link href="assets/css/jplayer.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/metroplayericon.css" />
+    <script src="assets/js/jquery.jplayer.min.js"></script>
 
+    <script src="assets/js/jplayer.config.js"></script>
+
+    <script src="assets/js/jplayer.playlist.min.js"></script>
     <script>
-						    //<![CDATA[
-						    $(document).ready(function(){
+        $(function () {
+            $.ajax({
+                "url": "../yy",
+                "type": "GET",
+                "data": "type=bofang" ,
+                "dataType": "JSON",
+                "success": a,
+                "error":function (XMLHttpResponse, textStatus, errorThrown) {
+                    alert("1 异步调用返回失败,XMLHttpResponse.readyState:"+XMLHttpResponse.readyState);
+                    alert("2 异步调用返回失败,XMLHttpResponse.status:"+XMLHttpResponse.status);
+                    alert("3 异步调用返回失败,textStatus:"+textStatus);
+                    alert("4 异步调用返回失败,errorThrown:"+errorThrown);
+                }
 
-						        new jPlayerPlaylist({
-						            jPlayer: "#jquery_jplayer_1",
-						            cssSelectorAncestor: "#jp_container_1"
-						        }, [
-						            {
-						                title:"<img src='assets/images/10.jpg' alt='' /><div class='item-song'>Darin - OK </div><div class='item-artist'>Dangerous Game</div>",
-						                itunes :"#",
-						                amazon : "#",
-						                buy : "",
-						                download : "",
+            });
+            function a(data) {
+               /* alert(data.toString());
+                alert(data[0].toString());*/
 
-
-						                mp3:"yinyue/Darin - OK (Dangerous Game).mp3",
-						                oga:""
-						            },
-						            {
-                                        title:"<img src='assets/images/11.jpg' alt='' /><div class='item-song'>Just a Dream </div><div class='item-artist'>Dangerous Game</div>",
-                                        itunes :"#",
-                                        amazon : "#",
-                                        buy : "",
-                                        download : "",
-
-
-                                        mp3:"yinyue/Kurt Hugo Schneider,Christina Grimmie,Sam Tsui - Just a Dream.mp3",
-                                        oga:""
-						            },
-						            {
-                                        title:"<img src='assets/images/12.jpg' alt='' /><div class='item-song'>少一点天分 </div><div class='item-artist'>孙盛希</div>",
-                                        itunes :"#",
-                                        amazon : "#",
-                                        buy : "",
-                                        download : "",
+                //data=data.repeat("%2F","/");
+                //alert(data.toString());
+                new jPlayerPlaylist({
+                    jPlayer: "#jquery_jplayer_1",
+                    cssSelectorAncestor: "#jp_container_1"
+                }, data , {
+                    swfPath: "js",
+                    supplied: "oga, mp3",
+                    wmode: "window",
+                    smoothPlayBar: false,
+                    keyEnabled: false
+                });
+            }
 
 
-                                        mp3:"yinyue/孙盛希 - 少一点天分.mp3",
-                                        oga:""
-						            },
-
-                                    {
-                                        title:"<img src='assets/images/13.jpg' alt='' /><div class='item-song'>Kaleena Zanders,Dropgun,Breathe Carolina </div><div class='item-artist'>Rhythm Is A Dancer</div>",
-                                        itunes :"#",
-                                        amazon : "#",
-                                        buy : "",
-                                        download : "",
-
-
-                                        mp3:"yinyue/Kaleena Zanders,Dropgun,Breathe Carolina - Rhythm Is A Dancer.mp3",
-                                        oga:""
-                                    }
-
-						        ], {
-						            swfPath: "js",
-						            supplied: "oga, mp3",
-						            wmode: "window",
-						            smoothPlayBar: false,
-						            keyEnabled: false
-						        });
-						    });
-						    //]]>
+        })
 						</script>
 
 </head>
@@ -155,11 +132,7 @@
     <!-- /container -->
     <!-- Javascript -->
 
-    <script src="assets/js/jquery.jplayer.min.js"></script>
 
-    <script src="assets/js/jplayer.config.js"></script>
-
-    <script src="assets/js/jplayer.playlist.min.js"></script>
 
 </body>
 </html>
